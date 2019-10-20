@@ -25,5 +25,13 @@
         "cerise",
     ];
 
-    // your code here
+    
+    document.getElementById("run").addEventListener("click", () => {
+        fruits.forEach(order);
+        function order(item) {
+            console.log(item); 
+          }
+
+    
+    }); 
 })();

@@ -25,5 +25,9 @@
         "cerise",
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        var four = fruits[3];
+        alert (four);
+
+    });    
 })();

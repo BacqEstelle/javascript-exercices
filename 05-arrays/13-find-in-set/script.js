@@ -22,5 +22,22 @@
         "Lucas",
     ]);
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+
+        console.log("Il y a "+people.size+" dans la liste");
+        if (people.has("Alexandre")) {
+            console.log("Il y a Alexandre dans la liste");
+        }
+        else {
+            console.log("Il n'y a pas Alexandre dans la liste");
+        }
+
+
+
+        
+
+
+    
+    }); 
 })();

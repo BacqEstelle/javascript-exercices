@@ -23,5 +23,11 @@
         "cerise",
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        var banane = fruits.splice(0, 1, "banane");
+        var kiwi = fruits.splice(9, 1, "Kiwi");
+        console.log(fruits);
+        
+
+    }); 
 })();

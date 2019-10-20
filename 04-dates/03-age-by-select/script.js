@@ -21,17 +21,20 @@
             var birthday = new Date(yearValue, monthValue-1, dayValue);
             
             var diffMilisec = today.valueOf() - birthday.valueOf();
+
             
-            var years_age = Math.floor(diffMilisec / 31536000000);
-            var days_age = Math.floor((diffMilisec % 31536000000) / 86400000);
+            var years_age = Math.floor(diffMilisec / 31557600000); // Moyenne sur 365.25 jours en millisecondes (pour compter les années bissextiles)
+            var days_age = Math.floor((diffMilisec % 31557600000) / 86400000); 
             
             if ((today.getMonth() == birthday.getMonth()) && (today.getDate() == birthday.getDate())) {
                 alert("Joyeux anniverssaire Vous avez "+ years_age + " ans aujourd'hui !");
             }
             
-            var months_age = Math.floor(days_age/30);
+            var months_age = Math.floor(days_age/(30.4375)); // Moyenne de jours par mois basé sur un cycle de 4 ans comprennant une année bissextiles
             
-            days_age = days_age % 30;
+            days_age = days_age % (30.4375);
+            days_age = Math.round(days_age); //Arrondi le jour.
+
             
             if (isNaN(years_age) || isNaN(months_age) || isNaN(days_age)) {
                 alert("Vous avez indiqué une date invalide !");

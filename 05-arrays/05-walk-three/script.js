@@ -38,5 +38,11 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        function order(index) {
+            console.log(index.lastname); 
+          }
+
+    
+    }); 
 })();

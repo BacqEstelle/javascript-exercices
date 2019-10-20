@@ -88,5 +88,27 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        var ageGlobal = 0;
+
+        function filtrerPerAge(obj) {
+
+          if (obj.age > 18 ) {
+            ageGlobal++;
+            return true;
+          } else {
+            return false;
+          }
+        }
+        
+        var peopleAge = people.filter(filtrerPerAge);
+        
+        console.log('Tableau filtré\n', peopleAge);
+
+        
+        console.log('Nombre de personne ayant plus de 18 ans = ', ageGlobal);
+
+
+    
+    }); 
 })();

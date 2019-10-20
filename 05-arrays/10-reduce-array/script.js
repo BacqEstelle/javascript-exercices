@@ -1,3 +1,5 @@
+
+
 /* becode/javascript
  *
  * /05-arrays/10-reduce-array/script.js - 5.10: utilisation d'un reducer
@@ -88,5 +90,29 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+        const reducer = (accumulator, currentValue) => accumulator + currentValue;
+        let list = [];
+
+            people.forEach(element => {
+                
+                list.push(element["age"]);
+            });
+            console.log("Addition de tous les ages: "+list.reduce(reducer)+" années");
+
+        
+       // var peopleAge = people.filter(filtrerPerAge);
+        
+       // console.log('Tableau filtré\n', peopleAge);
+
+        
+       // console.log('Nombre de personne ayant plus de 18 ans = ', ageGlobal);
+
+
+        
+
+
+    
+    }); 
 })();

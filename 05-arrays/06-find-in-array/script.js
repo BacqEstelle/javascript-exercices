@@ -87,6 +87,21 @@
             email: "gkeatche@google.fr",
         },
     ];
+    document.getElementById("run").addEventListener("click", () => {
+        function isdupont(people) {
+           return people.lastname === "Dupont";
+          }
+        function indexdupont(people){
+            return people.lastname === "Dupont";
+        }
 
-    // your code here
+        dupont = people.find(isdupont);
+        index = (people.findIndex(indexdupont)+1);
+        result1 = dupont.email; 
+        console.log("Index n° "+index+", email: "+result1);
+
+        
+
+    
+    }); 
 })();

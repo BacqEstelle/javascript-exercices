@@ -25,5 +25,19 @@
         "cerise",
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+        pomme = fruits.includes("pomme");
+
+        if (pomme === true){
+            console.log ("Oui, il y a une pomme dans la liste")
+        }
+        else {
+            console.log ("Non, il n'y a pas de pomme dans la liste")
+        }
+
+
+    
+    }); 
+    
 })();
