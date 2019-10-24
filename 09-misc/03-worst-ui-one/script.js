@@ -10,5 +10,30 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+
+    let slider = document.getElementById("slider");
+    let targetSlider = document.getElementById("target");
+
+
+    targetSlider.innerHTML = slider.value; 
+    
+
+    slider.oninput = function() {
+      targetSlider.innerHTML = this.value;
+    }
+
+    let style = document.createElement('style');
+    style.innerHTML = `
+    .material {
+    color: blueviolet;
+    font-size : 50px;
+    border : 10px solid black;
+    background-color : red;
+    }
+    .input#slider {
+    background : yellow;
+        }
+    `;
+    document.head.appendChild(style);
 })();

@@ -26,5 +26,20 @@
         os: "linux",
         user: null,
     };
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+  /*fonction qui complete les les ordinateurs*/
+  for(let computer of computers){//parcours de chaque ordinateur 
+    for(let prop in default_prop){ //parcours de chaque propriété du tableau default_prop 
+        if(!computer[String(prop)]){//si l'objet ne possède pas la propriété parcourue on l'affecte 
+            computer[String(prop)] = default_prop[prop];
+        }
+    }
+}
+
+
+
+
+    
+    }); 
 })();

@@ -10,5 +10,26 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    newEle = document.createElement("p");
+    newEle.setAttribute("id", "target");
+    oldEle = document.getElementById("target");
+    oldEle.parentNode.insertBefore(newEle, oldEle);
+
+    //console.log(document.getElementById("target"));
+    function extraire() {
+        character = message.substring(I, I=I+1) ;
+        if ( character == "-" &&  message.substr(I, 5) == "stop-" ) {              
+             character = "<br>" ;
+             I = I + 5;
+             }
+             newEle.innerHTML += character;
+        if ( I < message.length ) setTimeout(extraire, 100);
+        }
+   I = 0 ;
+   message = oldEle.innerHTML;
+   
+   extraire();
+  
+   oldEle.parentNode.removeChild(oldEle);
 })();

@@ -10,5 +10,24 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+   // window.onload = window.localStorage.clear(); // remise a 0 quand on recharge la page
+     
+    function active_counter() {
+        var n = localStorage.getItem('on_click');
+ 
+        if (n === null) {
+            n = 0;
+        }
+         
+        n++;
+         
+        localStorage.setItem("on_click", n);
+         
+        document.getElementById('target').innerHTML = n;
+    }
+     
+    document.getElementById('increment').addEventListener('click', active_counter);
+
+
+
 })();

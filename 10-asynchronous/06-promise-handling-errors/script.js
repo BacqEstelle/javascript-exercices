@@ -10,5 +10,8 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    document.getElementById("run").onclick = function (){
+        lib.getPersons().then(posts => console.log(posts) || console.error(Error))
+    }
 })();

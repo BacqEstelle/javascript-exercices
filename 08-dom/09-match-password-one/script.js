@@ -10,5 +10,24 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+   document.getElementById("run").addEventListener("click", () => {
+    function validation(field) {
+        if (document.getElementById("pass-one").value == '' || document.getElementById("pass-two").value == '') {
+          alert('Tous les champs ne sont pas remplis');
+          }
+        else if (document.getElementById("pass-one").value != document.getElementById("pass-two").value) {
+          alert('Ce ne sont pas les mêmes mots de passe!');
+
+          }
+        else if (document.getElementById("pass-one").value == document.getElementById("pass-two").value) {
+            alert("Votre mot de passe a été enregistré !")
+          }
+        else {
+
+          return false;
+          }
+        }
+        validation();
+    });
 })();

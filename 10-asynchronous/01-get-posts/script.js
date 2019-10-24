@@ -10,5 +10,10 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let err = "Erreur script";
+    document.getElementById("run").onclick = function (){
+        window.lib.getPosts((err, articles) => {
+            console.log(articles);
+        });
+    }
 })();

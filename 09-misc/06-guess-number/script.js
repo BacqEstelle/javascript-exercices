@@ -10,5 +10,31 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let min =  1;
+    let max = 100;
+    let random = Math.floor(Math.random() * (max - min) + min);
+    console.log(random);
+    let essai = 0;
+
+    chiffrePrompt();
+    
+function chiffrePrompt(){    
+    let chiffre = prompt ("Quelle est votre chiffre ?");
+    if(chiffre > random) {
+
+        
+        ++essai;
+        
+        alert("Votre chiffre est trop grand. Vous avez fait : " +essai+ " essais ");
+        chiffrePrompt();
+    }else if (chiffre < random) {
+        ++essai;
+        alert ("Votre chiffre est trop petit.  Vous avez fait : " +essai+ " essais" );
+        chiffrePrompt();
+        
+    }else{
+
+        alert ("votre chiffre est le bon ! Vous avez fait :" +essai+ " essais !");
+    }
+}
 })();

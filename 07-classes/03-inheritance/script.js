@@ -11,9 +11,42 @@
 
 (() => {
     class Animal {
+        
         sayHello() {
             return `${this.constructor.greeting}! I'm ${this.name}!`;
         }
     }
-    // your code here
+    class Cat {
+        constructor(name, greeting) {
+            this.name = name;
+
+        }
+        static greeting = "Miou ";
+        sayHello() {
+            return `${this.constructor.greeting}! I'm ${this.name}!`;
+        }
+    }   
+    class Dog {
+        constructor(name, greeting) {
+            this.name = name;
+
+        }
+        static greeting = "Wouf ";
+        sayHello() {
+            return `${this.constructor.greeting}! I'm ${this.name}!`;
+        }
+    }
+
+    document.getElementById("run").addEventListener("click", () => {
+        var skitty = new Cat(" Skitty ");
+        var doggy = new Dog(" Doggy ")
+
+        console.log(skitty.sayHello());
+        console.log(doggy.sayHello());
+
+        
+
+
+    
+    }); 
 })();

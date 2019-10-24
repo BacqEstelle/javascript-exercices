@@ -10,5 +10,20 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+document.getElementById("run").onclick = function (){
+    lib.getPosts().then((posts) => {
+        console.log(posts); 
+
+        const ids = []; 
+        for(const post of posts){ 
+            ids.push(post.id); 
+            for (const id of ids){ 
+                lib.getComments().then((comments => {
+                    post.comments = comments; 
+                    
+                }));
+            }
+        }
+    })
+}
 })();

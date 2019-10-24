@@ -10,5 +10,28 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    
+    let obj = document.getElementsByTagName("span")[1]; 
+    ref= obj.getAttribute("data-image");
+
+    var tagFigure = document.getElementsByTagName('figure')[0];
+
+    var tagImage = document.createElement('img');
+        tagImage.innerHTML = tagFigure.innerHTML;
+
+        tagFigure.parentNode.insertBefore(tagImage, tagFigure);
+        tagFigure.parentNode.removeChild(tagFigure);
+    
+    let obj2 = document.querySelector("img"); 
+    ref2= obj2.setAttribute("src", ref);
+
+    obj.parentNode.removeChild(obj);
+    
+    console.log(ref);
+
+ 
+
+
+
+    
 })();

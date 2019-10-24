@@ -21,7 +21,7 @@
                     console.log ("Le chiffre " + number + " est FizzBuzz");
                 }
                 else{
-                consol.log ("Le chiffre " + number + " est fizz");
+                console.log ("Le chiffre " + number + " est fizz");
                 }
             }
             else if (number != 0 && ( number % 5 == 0 )){

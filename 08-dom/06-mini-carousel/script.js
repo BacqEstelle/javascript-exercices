@@ -10,6 +10,7 @@
 // You will have time to focus on it later.
 
 (() => {
+
     const gallery = [
         "../../_shared/img/bell.svg",
         "../../_shared/img/clock.svg",
@@ -18,5 +19,21 @@
         "../../_shared/img/map.svg",
     ];
 
-    // your code here
+    let imageTag = document.getElementsByTagName("img")[0]; 
+        imgOne= imageTag.getAttribute("src");
+    console.log(imageTag);
+
+        let i = 0;
+        document.getElementById("next").addEventListener("click", () => {
+
+                if(i === gallery.length - 1) {
+                    i=0;
+                    
+                } else {
+                    i++;
+                }
+                imageTag.setAttribute("src", gallery[i]);
+            
+        });
+
 })();

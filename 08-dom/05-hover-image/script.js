@@ -10,5 +10,15 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let imageTag = document.getElementsByTagName("img")[0]; 
+    imgOne= imageTag.getAttribute("src");
+    console.log(imgOne);
+
+    imageTag.onmouseover = function(){
+
+    imgTwo= imageTag.getAttribute("data-hover");
+    console.log(imgTwo);
+
+    imageTag.setAttribute("src", imgTwo);
+    };
 })();
