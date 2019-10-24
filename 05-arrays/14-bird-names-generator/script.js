@@ -24,7 +24,7 @@
         {name: "tourterelle", fem: true},
         {name: "corneille", fem: true},
     ];
-    const adjectives = new Set([
+    const adjectives = [
         "cendré",
         "huppé",
         "chantant",
@@ -36,7 +36,21 @@
         "pantelant",
         "tangent",
         "arboré",
-    ]);
+    ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        let randomBirds = birds[Math.floor(Math.random(birds))];
+        let random = adjectives[Math.floor(Math.random(adjectives))];
+        if (randomBirds.hasOwnProperty('fem')){
+       document.getElementById("target").innerHTML = (randomBirds.name+" "+random+"e")
+        }
+        else { document.getElementById("target").innerHTML = (randomBirds.name+" "+ random)
+        }
+
+
+        
+
+
+    
+    }); 
 })();

@@ -10,5 +10,5 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    Array.from(document.getElementsByClassName("target")).forEach(x => x.innerHTML = "owned !");
 })();
